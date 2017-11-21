@@ -24,5 +24,37 @@ namespace FirstWPF
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            lvwMyList.Items.Add("5");
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            lvwMyList.Items.Add("10");
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            lvwMyList.Items.Add("15");
+        }
+        private void lblResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            lvwMyList.Items.Clear();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            int total = 0;
+            foreach (string Li in lvwMyList.Items) 
+
+            {
+                total += Convert.ToInt16(Li);
+            }
+            lvwTotaal.Items.Add(total);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            lvwTotaal.Items.Clear();
+        }
     }
 }
